@@ -1,3 +1,13 @@
+#main-home h1, #main-home h2 {
+}
+
+select {
+	margin-left: 20px;
+	margin-right: 20px;
+	border: 0px;
+	border-bottom: 2px dotted #559299;
+}
+
 .boolbutton .correct.answered {
 	background-color:#B1FF8A
 }
@@ -24,18 +34,6 @@
 
 .boolbutton {
 	text-align:center;
-	margin-right:180px
-}
-
-article ul {
-	margin-right:180px
-}
-ul {
-	margin-right:180px
-}
-
-article p {
-	margin-right:180px
 }
 
 * {
@@ -124,7 +122,6 @@ code,kbd,pre,samp {
 button,input,optgroup,select,textarea {
 	color:inherit;
 	font:inherit;
-	margin:0
 }
 button {
 	overflow:visible
@@ -6367,25 +6364,25 @@ address #navbar form .nav {
 	background-image:url(http://www.photo-paysage.com/albums/userpics/10001/Un_nenuphar_blanc_dans_un_bassin_-_02.jpg)
 }
 .slide2 .parallax {
-	background-image:url(http://www.photo-paysage.com/albums/userpics/10001/Un_nenuphar_blanc_dans_un_bassin_-_02.jpg)
+	background-image:url(http://arcus.a.r.pic.centerblog.net/o/8dfd1c83.jpg)
 }
 .slide3 .parallax {
-	background-image:url(http://www.photo-paysage.com/albums/userpics/10001/Un_nenuphar_blanc_dans_un_bassin_-_02.jpg)
+	background-image:url(http://www.aurelle-verlac.com/fleurs/nenupharjaune.jpg)
 }
 .slide4 .parallax {
-	background-image:url(http://www.photo-paysage.com/albums/userpics/10001/Un_nenuphar_blanc_dans_un_bassin_-_02.jpg)
+	background-image:url(https://leklektik.files.wordpress.com/2011/12/lotus-cambodia-448-1.jpg)
 }
 .slide5 .parallax {
-	background-image:url(http://www.photo-paysage.com/albums/userpics/10001/Un_nenuphar_blanc_dans_un_bassin_-_02.jpg)
+	background-image:url(http://framboise782.free.fr/Fleurs_printemps/nenuphar1.jpg)
 }
 .slide6 .parallax {
-	background-image:url(http://www.photo-paysage.com/albums/userpics/10001/Un_nenuphar_blanc_dans_un_bassin_-_02.jpg)
+	background-image:url(http://images6.alphacoders.com/498/498605.jpg)
 }
 .slide7 .parallax {
-	background-image:url(../img/parallax06-sm.jpg)
+	background-image:url(http://data.1freewallpapers.com/detail/purple-water-lily.jpg)
 }
 .slide8 .parallax {
-	background-image:url(../img/parallax07-sm.jpg)
+	background-image:url(http://www.ac-grenoble.fr/smh/IMG/jpg/nenuphar-.jpg)
 }
 .slide4 .container.wrapper {
 	position:relative
@@ -6440,9 +6437,6 @@ address #navbar form .nav {
 }
 section .container.wrapper:last-child {
 	padding-bottom:40px
-}
-.container.wrapper p,.container.wrapper h1,.container.wrapper h2,.container.wrapper h3,.container.wrapper quote,.container.wrapper blockquote {
-	max-width:740px;
 }
 .container.wrapper p {
 	font-size:120%;
@@ -6661,28 +6655,28 @@ footer.navbar .navbar-nav>.active>a:after {
 		font-size:70%
 	}
 	.slide1 .parallax {
-		background-image:url(../img/parallax00-md.jpg)
+		background-image:url(http://www.photo-paysage.com/albums/userpics/10001/Un_nenuphar_blanc_dans_un_bassin_-_02.jpg)
 	}
 	.slide2 .parallax {
-		background-image:url(../img/parallax01-md.jpg)
+		background-image:url(http://arcus.a.r.pic.centerblog.net/o/8dfd1c83.jpg)
 	}
 	.slide3 .parallax {
-		background-image:url(../img/parallax02-md.jpg)
+		background-image:url(http://www.aurelle-verlac.com/fleurs/nenupharjaune.jpg)
 	}
 	.slide4 .parallax {
-		background-image:url(../img/parallax03-md.jpg)
+		background-image:url(https://leklektik.files.wordpress.com/2011/12/lotus-cambodia-448-1.jpg)
 	}
 	.slide5 .parallax {
-		background-image:url(../img/parallax04-md.jpg)
+		background-image:url(http://framboise782.free.fr/Fleurs_printemps/nenuphar1.jpg)
 	}
 	.slide6 .parallax {
-		background-image:url(../img/parallax05-md.jpg)
+		background-image:url(http://images6.alphacoders.com/498/498605.jpg)
 	}
 	.slide7 .parallax {
-		background-image:url(../img/parallax06-md.jpg)
+		background-image:url(http://data.1freewallpapers.com/detail/purple-water-lily.jpg)
 	}
 	.slide8 .parallax {
-		background-image:url(../img/parallax07-md.jpg)
+		background-image:url(http://www.ac-grenoble.fr/smh/IMG/jpg/nenuphar-.jpg)
 	}
 }
 @media (min-width:992px) {
