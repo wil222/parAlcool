@@ -1,7 +1,5 @@
 function initTF() {
 	var container = document.querySelectorAll('.boolbutton');
-	//var truediv;
-	//var falsediv;
 	for (var i=0; i<container.length; i++) {
 		var value = container[i].getAttribute('valllue');
 		var truediv = document.createElement('div');
@@ -26,8 +24,7 @@ function initTF() {
 	}
 }
 
-function truefalse(id, value) {
-	console.log('.boolbutton ' + id);
+function truefalse(id, value, h1, h2) {
 	var elements = document.querySelectorAll('.boolbutton');
 	var div;
 	for (var i=0 ; i<elements.length; i++) {
@@ -35,7 +32,6 @@ function truefalse(id, value) {
 			div = elements[i];
 		}
 	}
-	console.log(div + ' ' + value);
 	if(value == true) {
 		div.firstChild.className += ' answered';
 		div.lastChild.className += ' unanswered';
@@ -44,6 +40,8 @@ function truefalse(id, value) {
 		div.firstChild.className += ' unanswered';
 		div.lastChild.className += ' answered';
 	}
+	div.firstChild.removeEventListener('click', h1);
+	div.lastChild.removeEventListener('click', h2);
 }
 
 function score(id) {
@@ -51,7 +49,6 @@ function score(id) {
 	var display = document.getElementById('test1-score');
 	var value = optionlist.options[optionlist.selectedIndex].value;
 	var previous_value = optionlist.getAttribute('previous_value');
-	console.log(display.innerHTML);
 	display.innerHTML = parseInt(display.innerHTML) + parseInt(value) - parseInt(previous_value);
 	optionlist.setAttribute('previous_value', value);
 }
@@ -63,8 +60,12 @@ function addTest1Listener(id) {
 }
 
 function addTFListener(t,f,id) {
-	t.addEventListener('click', function() {truefalse(id, true);}, false);
-	f.addEventListener('click', function() {truefalse(id, false);}, false);
+	var h1;
+	var h2;
+	h1 = function() {truefalse(id, true, h1, h2);};
+	h2 = function() {truefalse(id, false, h1, h2);}
+	t.addEventListener('click', h1, false);
+	f.addEventListener('click', h2, false);
 }
 
 function initTest1() {
