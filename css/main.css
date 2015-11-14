@@ -6383,6 +6383,9 @@ address #navbar form .nav {
 .slide8 .parallax {
 	background-image:url(http://www.ac-grenoble.fr/smh/IMG/jpg/nenuphar-.jpg)
 }
+.slide9 .parallax {
+	background-image:url(http://hommelibre.blog.tdg.ch/media/02/02/1225834961.jpg)
+}
 .slide4 .container.wrapper {
 	position:relative
 }
@@ -6677,6 +6680,9 @@ footer.navbar .navbar-nav>.active>a:after {
 	.slide8 .parallax {
 		background-image:url(http://www.ac-grenoble.fr/smh/IMG/jpg/nenuphar-.jpg)
 	}
+	.slide9 .parallax {
+		background-image:url(http://hommelibre.blog.tdg.ch/media/02/02/1225834961.jpg)
+	}
 }
 @media (min-width:992px) {
 	p.lead:not(.col-md-8) {
@@ -6892,6 +6898,9 @@ footer.navbar .navbar-nav>.active>a:after {
 	}
 	.slide8 .parallax {
 		background-image:url(http://www.ac-grenoble.fr/smh/IMG/jpg/nenuphar-.jpg)
+	}
+	.slide9 .parallax {
+		background-image:url(http://hommelibre.blog.tdg.ch/media/02/02/1225834961.jpg)
 	}
 }
 @media (min-width:1600px) {

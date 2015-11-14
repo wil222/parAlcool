@@ -21,6 +21,8 @@
 	<?php include 'slide_illustrations.html';?>
 	<?php include 'slide_aide.html';?>
 	
+	<?php include 'blog.php';?>
+	
 	<?php include 'footer.html';?>
 	
 	<!--TODO js-->
