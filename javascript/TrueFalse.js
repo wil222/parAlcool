@@ -20,17 +20,33 @@ function initTF() {
 			truediv.className ='incorrect';
 			falsediv.className ='correct';
 		}
+		addTFListener(truediv, falsediv, container[i].getAttribute('aria-controls'));
 		container[i].appendChild(truediv);
 		container[i].appendChild(falsediv);
 	}
 }
 
-function truefalse(id) {
-	
+function truefalse(id, value) {
+	console.log('.boolbutton ' + id);
+	var elements = document.querySelectorAll('.boolbutton');
+	var div;
+	for (var i=0 ; i<elements.length; i++) {
+		if (elements[i].getAttribute('aria-controls') === id) {
+			div = elements[i];
+		}
+	}
+	console.log(div + ' ' + value);
+	if(value == true) {
+		div.firstChild.className += ' answered';
+		div.lastChild.className += ' unanswered';
+	}
+	else {
+		div.firstChild.className += ' unanswered';
+		div.lastChild.className += ' answered';
+	}
 }
 
 function score(id) {
-	console.log(id);
 	var optionlist = document.getElementById(id);
 	var display = document.getElementById('test1-score');
 	var value = optionlist.options[optionlist.selectedIndex].value;
@@ -44,6 +60,11 @@ function addTest1Listener(id) {
 	document.getElementById(id).addEventListener('click', function() {score(id);}, false);
 	document.getElementById(id).setAttribute('previous_value', 0);
 	document.getElementById(id).value = 0;
+}
+
+function addTFListener(t,f,id) {
+	t.addEventListener('click', function() {truefalse(id, true);}, false);
+	f.addEventListener('click', function() {truefalse(id, false);}, false);
 }
 
 function initTest1() {

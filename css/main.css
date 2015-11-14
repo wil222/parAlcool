@@ -17,7 +17,7 @@ select {
 }
 
 .boolbutton .unanswered {
-	background-color:#333;
+	opacity:0.2;
 }
 
 .boolbutton .semicorrect.answered {
@@ -27,8 +27,7 @@ select {
 .boolbutton div {
 	width:100px;
 	display:inline-block;
-	border: 1px solid #333;
-	border-radius: 10px;
+	border: 2px solid #559299;
 	margin: 0px 10px 0px 10px;
 }
 
