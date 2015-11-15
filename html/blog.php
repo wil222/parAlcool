@@ -40,15 +40,9 @@
 				<?php
 					}
 				?>
-				<form id="answer-<?php echo $donnees['id'];?>">
-					<a type="submit" href="#">Répondre</a>
-					<div class="comment-area" hidden>
-						<legend>Votre commentaire :</legend>
-						<div><textarea placeholder="Commentaire" required></textarea></div>
-						<input type="text" placeholder="Pseudo" required/>
-						<input type="submit" value="Envoyer"/>
-						<label><input name="conditions" type="checkbox" /> J'ai lu et j'accepte les <a href="#">conditions d'utilisation</a></label>
-					</div>
+				
+				<a class="comment-btn" href="javascript: void(0)" id="answer-<?php echo $donnees['id'];?>">Répondre</a>
+				<form class="comment-area" name="answer-<?php echo $donnees['id'];?>">
 				</form>
 			</p>
 		</div>
@@ -58,15 +52,7 @@
 		$req->closeCursor();
 		?>
 		
-		<form id="newcomment">
-			<input type="submit" class="btn btn-primary" value="Nouveau commentaire"/>
-			<div class="comment-area" hidden>
-				<h2>Votre commentaire :</h2>
-				<div><textarea placeholder="Commentaire" required></textarea></div>
-				<input type="text" placeholder="Pseudo" required/>
-				<input type="submit" value="Envoyer"/>
-				<label><input name="conditions" type="checkbox" /> J'ai lu et j'accepte les <a href="#">conditions d'utilisation</a></label>
-			</div>
-		</form>
+		<input type="submit" class="btn btn-primary" id="newcomment" value="Nouveau commentaire"/>
+		<form name="newcomment"></form>
 	</div>
 </section>
