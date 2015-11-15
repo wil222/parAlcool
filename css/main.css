@@ -1,6 +1,35 @@
 #main-home h1, #main-home h2 {
 }
 
+.comment-container {
+	border: 4px solid #559299;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	padding: 10px;
+}
+
+.comment-answer {
+	margin-left: 20px;
+	border-left: 2px solid #559299;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.comment-answer .author {
+	font-weight: bold;
+}
+
+.comment-container .date {
+	font-size: 60%;
+}
+
+input.button {
+	border: 2px solid #559299;
+	color: #9D9D9D;
+	text-transform: uppercase;
+	background-color: #333;
+}
+
 select {
 	margin-left: 20px;
 	margin-right: 20px;
@@ -22,6 +51,11 @@ select {
 
 .boolbutton .semicorrect.answered {
 	background-color:#BBB
+}
+
+.boolbutton div:hover:not(.answered):not(.unanswered) {
+	background-color:#559299;
+	color:#FFF;
 }
 
 .boolbutton div {
@@ -6267,7 +6301,7 @@ body.page {
 	left:0;
 	height:20px;
 	width:20px;
-	background:url(../img/quote.png) center no-repeat;
+	background:url(../images/quote.png) center no-repeat;
 	background-size:contain;
 	z-index:10
 }
@@ -6282,7 +6316,7 @@ body.page {
 	-ms-transform:scale(-1,1);
 	-o-transform:scale(-1,1);
 	transform:scale(-1,1);
-	background:url(../img/quote.png) center no-repeat;
+	background:url(../images/quote.png) center no-repeat;
 	background-size:contain;
 	z-index:10
 }
@@ -6540,7 +6574,7 @@ blockquote:before {
 	opacity:.1;
 	height:80px;
 	width:80px;
-	background:url(../img/quote-b.png) center no-repeat;
+	background:url(../images/quote-b.png) center no-repeat;
 	background-size:contain
 }
 blockquote:before {
