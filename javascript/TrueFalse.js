@@ -119,10 +119,12 @@ function showCommentArea(form, button, fct) {
 	textarea.style.rows = 5;
 	textarea.style.width = '100%';
 	textarea.className = 'textarea';
+	textarea.name = 'comment';
 	var pseudo = document.createElement('input');
 	pseudo.type = 'text';
 	pseudo.placeholder = 'Pseudo';
 	pseudo.className = 'textarea';
+	pseudo.name = 'pseudo';
 	var submit = document.createElement('input');
 	submit.type = 'submit';
 	submit.value = 'Envoyer';
@@ -133,6 +135,10 @@ function showCommentArea(form, button, fct) {
 	var link = document.createElement('a');
 	link.href = '#';
 	link.appendChild(document.createTextNode('conditions d\'utilisation'));
+	var nb = document.createElement('input');
+	nb.style.display = 'none';
+	nb.name = 'nb';
+	nb.value = form.name.split('-')[1];
 	
 	divtext.appendChild(textarea);
 	label.appendChild(checkbox);
@@ -144,6 +150,7 @@ function showCommentArea(form, button, fct) {
 	form.appendChild(pseudo);
 	form.appendChild(submit);
 	form.appendChild(label);
+	form.appendChild(nb);
 	button.style.display = 'none';
 }
 		/*<form>
