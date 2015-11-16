@@ -138,7 +138,13 @@ function showCommentArea(form, button, fct) {
 	var nb = document.createElement('input');
 	nb.style.display = 'none';
 	nb.name = 'nb';
-	nb.value = form.name.split('-')[1];
+	if(form.name === 'newcomment') {
+		nb.value = form.name;
+		console.log('new comment');
+	} else {
+		nb.value = form.name.split('-')[1];
+		console.log('answer to ' + nb.value);
+	}
 	
 	divtext.appendChild(textarea);
 	label.appendChild(checkbox);

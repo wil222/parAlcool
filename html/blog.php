@@ -21,6 +21,7 @@
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$nb = test_input($_POST["nb"]);
+			$date = date("Y-m-j H:i:s");
 			if (empty($_POST["pseudo"])) {
 				$pseudoErr = "Name is required";
 			} 
@@ -39,17 +40,23 @@
 			}
 			
 			if (!empty($_POST["comment"]) && !empty($_POST["pseudo"])) {
-				$date = date("Y-m-j H:i:s");
-				$prep = $bdd->prepare("INSERT INTO `commentaires` (`id_billet`, `auteur`, `commentaire`, `date_commentaire`) VALUES (:id_billet, :auteur, :commentaire, :date_commentaire)");
-				$prep->bindParam(':id_billet', $nb);
-				$prep->bindParam(':auteur', $pseudo);
-				$prep->bindParam(':commentaire', $comment);
-				$prep->bindParam(':date_commentaire', $date);
-				/*if ($prep->execute() === TRUE) {
-					echo "New record created successfully";
+				if ($nb == "newcomment" ) {
+					$prep = $bdd->prepare("INSERT INTO `billets` (`titre`, `contenu`, `date_creation`) VALUES (:titre, :contenu, :date_creation)");
+					$prep->bindParam(':titre', $pseudo);
+					$prep->bindParam(':contenu', $comment);
+					$prep->bindParam(':date_creation', $date);
+					$prep->execute();
+					$prep->closeCursor();
+				
 				} else {
-					echo "Error: " ."<br>" . $bdd->errorInfo();
-				}*/
+					$prep = $bdd->prepare("INSERT INTO `commentaires` (`id_billet`, `auteur`, `commentaire`, `date_commentaire`) VALUES (:id_billet, :auteur, :commentaire, :date_commentaire)");
+					$prep->bindParam(':id_billet', $nb);
+					$prep->bindParam(':auteur', $pseudo);
+					$prep->bindParam(':commentaire', $comment);
+					$prep->bindParam(':date_commentaire', $date);
+					$prep->execute();
+					$prep->closeCursor();
+				}
 		?>
 				<script>alert("<?php echo $comment." posté le ".$date;?> ");</script>
 		<?php
