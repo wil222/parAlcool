@@ -12,9 +12,9 @@
 	<body data-spy="scroll" data-target="#navbar">
 	<?php include 'header.html';?>
 	
-	<?php include 'slide_accueil.html';?>
 	<?php include 'slide_test.html';?>
 	<?php include 'slide_idea.html';?>
+	<?php include 'slide_definitions.html';?>
 	<?php include 'slide_dynamique.html';?>
 	<?php include 'slide_problem.html';?>
 	<?php include 'slide_circle.html';?>
