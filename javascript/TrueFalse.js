@@ -64,7 +64,7 @@ initTF();
  * Fonctions utilisees pour la gestion du premier test
  */
 
-function score(id) {
+function score1(id) {
 	var display = document.getElementById('test1-score');
 	var value = id.options[id.selectedIndex].value;
 	display.innerHTML = parseInt(display.innerHTML) + parseInt(value) - parseInt(id.getAttribute('previous_value'));
@@ -72,7 +72,7 @@ function score(id) {
 }
 
 function addTest1Listener(id) {
-	id.addEventListener('click', function() {score(id);}, false);
+	id.addEventListener('click', function() {score1(id);}, false);
 	id.setAttribute('previous_value', 0);
 	id.value = 0;
 }
@@ -82,8 +82,37 @@ function initTest1() {
 		addTest1Listener(document.getElementById('q1-'+i));
 	}
 }
-	
+
 initTest1();
+
+/*
+ * Fonctions utilisees pour la gestion du second test
+ */
+
+function initTest2() {
+	var max = [7,6,4];
+	for(var i=1; i<4; i++) {
+		for(var j=1; j< max[i-1];j++) {
+			addTest2Listener(document.getElementById('q2-'+i+'-'+j));
+		}
+	}
+}
+
+function addTest2Listener(id) {
+	id.addEventListener('input', function() {score2(id);}, false);
+	id.setAttribute('previous_value', 0);
+	id.value = 0;
+}
+
+function score2(id) {
+	var display = document.getElementById('test2-score');
+	var value = id.value;
+	display.innerHTML = parseInt(display.innerHTML) + parseInt(value) - parseInt(id.getAttribute('previous_value'));
+	id.setAttribute('previous_value', value);
+}
+
+initTest2();
+	
 
 
 /*

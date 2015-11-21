@@ -1,4 +1,20 @@
-#main-home h1, #main-home h2 {
+#main-home .main-title {
+	font-size:68px;
+}
+
+#main-home .sub-title {
+	font-size:20px;
+}
+
+#main-home {
+	color:#333;
+}
+
+.accordion article li ul li p:first-child  {
+	margin:0;
+	margin-bottom:5px;
+	margin-left:10px;
+	padding-left:10px;
 }
 
 .comment-container {
@@ -2613,8 +2629,9 @@ input[type=file] {
 	display:block
 }
 input[type=range] {
-	display:block;
-	width:100%
+	/*display:block;
+	width:100%*/
+	
 }
 select[multiple],select[size] {
 	height:auto
@@ -6408,7 +6425,7 @@ address #navbar form .nav {
 	-o-background-size:cover;
 	background-size:cover
 }
-.slide1 .parallax {
+.slide10 .parallax {
 	background-image:url(http://www.photo-paysage.com/albums/userpics/10001/Un_nenuphar_blanc_dans_un_bassin_-_02.jpg)
 }
 .slide2 .parallax {
@@ -6705,7 +6722,7 @@ footer.navbar .navbar-nav>.active>a:after {
 	#main-home {
 		font-size:70%
 	}
-	.slide1 .parallax {
+	.slide10 .parallax {
 		background-image:url(http://www.photo-paysage.com/albums/userpics/10001/Un_nenuphar_blanc_dans_un_bassin_-_02.jpg)
 	}
 	.slide2 .parallax {
@@ -6924,7 +6941,7 @@ footer.navbar .navbar-nav>.active>a:after {
 		background-position:center 0;
 		background-attachment:fixed
 	}
-	.slide1 .parallax {
+	.slide10 .parallax {
 		background-image:url(http://www.photo-paysage.com/albums/userpics/10001/Un_nenuphar_blanc_dans_un_bassin_-_02.jpg)
 	}
 	.slide2 .parallax {
