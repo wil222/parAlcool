@@ -10,6 +10,14 @@
 	color:#333;
 }
 
+.accident-table td, .accident-table th{
+	padding:10px;
+}
+
+.accident-table td{
+	text-align:center;
+}
+
 .accordion article li ul li p:first-child  {
 	margin:0;
 	margin-bottom:5px;
