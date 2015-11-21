@@ -72,7 +72,8 @@ function score1(id) {
 }
 
 function addTest1Listener(id) {
-	id.addEventListener('click', function() {score1(id);}, false);
+	id.addEventListener('change', function() {score1(id);}, false);
+	id.addEventListener('keyup', function() {score1(id);}, false);
 	id.setAttribute('previous_value', 0);
 	id.value = 0;
 }
