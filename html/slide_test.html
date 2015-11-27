@@ -8,7 +8,7 @@
 	<div class="container wrapper">
 		<p>Comment savoir si la consommation d'alcool est problématique? Quand est-ce que ce n'est plus "normal"? A partir de quand faut-il réagir? Mon couple est-il réellement en difficulté?</p>
 		<p>Ces questions n'ont pas de réponses faciles. Pour vous aider à vous y retrouver, voici deux tests utilisés en psychologie afin de donner des balises concernant l'aspect problématique de la consommation d'alcool et la présence de difficultés dans le couple.</p>
-		<p>Note: Si la consommation d'alcool de votre conjoint a un retentissement sur votre vie quotidienne, que vous vous sentez mal par rapport à ça, qu'elle génère des conflits et des difficultés, c'est votre ressenti qui prime. Si vous vous sentez mal, vous méritez d'être aidé car il y a un problème, peu importe alors les résultats des tests présentés ci-dessous.</p>
+		<p>Si la consommation d'alcool de votre conjoint a un retentissement sur votre vie quotidienne, que vous vous sentez mal par rapport à ça, qu'elle génère des conflits et des difficultés, c'est votre ressenti qui prime. Si vous vous sentez mal, vous méritez d'être aidé car il y a un problème, peu importe alors les résultats des tests présentés ci-dessous.</p>
 	</div>
 	<div class="container wrapper">
 		<h2>Mon partenaire a-t-il un problème d'alcool</h2>
@@ -50,7 +50,7 @@
 			<option value="4">Tous les jours ou presque</option>
 		</select>
 
-		<p>5. Au cours de l’année écoulée combien de fois sa consommation d’alcool l’a-t-elle empêcher de faire ce qui était normalement attendu de lui ?</p>
+		<p>5. Au cours de l’année écoulée combien de fois sa consommation d’alcool l’a-t-elle empêché de faire ce qui était normalement attendu de lui ?</p>
 		<select id="q1-5">
 			<option value="0">Jamais</option>
 			<option value="1">Moins d’une fois par mois</option>
@@ -93,7 +93,7 @@
 			<option value="4">Oui, au cours de l’année</option>
 		</select>
 
-		<p>10. Un parent, un ami, un médecin ou un autre soignant s’est-il inquiété de sa consommation d’alcool ou a-t-il suggérer qu’il la réduise ?</p>
+		<p>10. Un parent, un ami, un médecin ou un autre soignant s’est-il inquiété de sa consommation d’alcool ou a-t-il suggéré qu’il la réduise ?</p>
 		<select id="q1-10">
 			<option value="0">Non</option>
 			<option value="2">Oui, mais pas au cours de l’année écoulée</option>
@@ -102,8 +102,17 @@
 
 		<h3>Résultat</h3>
 		<p>Votre score : <span id="test1-score">0</span></p>
-		<p>Un score supérieur ou égal à 8 chez l’homme et à 7 chez la femme est évocateur d’un mésusage actuel d’alcool.</p>
-		<p>Un score supérieur à 12 chez l’homme et supérieur à 11 chez la femme serait en faveur d’une dépendance à l’alcool (<a href="http://www.sfalcoologie.asso.fr/">Société française d’alcoologie</a>, 2001)</p>
+		<p> Un score supérieur ou égal à 8 chez l’homme et à 7 chez la femme est évocateur d’un mésusage actuel d’alcool.</p>
+		    <p>A Partir de 8, il est donc important de faire attention.
+		Cependant, les stratégies à mettre en place ne sont pas les mêmes en fonctions du résultat. Voici les recommandations faites par l'OMS: 
+	</p>
+	<table class="accident-table">
+		<tr><th>Niveau de risque</th><th>Intervention</th><th>Score à l’AUDIT</th></tr>
+		<tr><td>Zone 1</td><td>Éducation concernant l’alcool et ses effets (prévention).</td><td>0-7</td></tr>
+		<tr><td>Zone 2</td><td>Simple conseil</td><td>8-15</td></tr>
+		<tr><td>Zone 3</td><td>Simple conseil, psychothérapie brève et  surveillance continue.</td><td>16-19</td></tr>
+		<tr><td>Zone 4</td><td>Référence à un spécialiste pour le diagnostic, l’évaluation et le traitement du problème.</td><td>20-40</td></tr>
+	</table>
 	</div>
 	<div class="container wrapper">
 		<h2>Avons-nous des problèmes relationnels dans notre couple?</h2>
@@ -154,7 +163,7 @@
 				<p>Tout le temps<input id="q2-2-3" type="range" name="points" min="0" max="5">Jamais</p>
 			</li>
 			<li>
-				<p>A quelle fréquence vous &laquo; tapez vous sur les nerfs &raquo; avec votre partenaire ?</p>
+				<p>A quelle fréquence vous &laquo; tapez-vous sur les nerfs &raquo; avec votre partenaire ?</p>
 				<p>Tout le temps<input id="q2-2-4" type="range" name="points" min="0" max="5">Jamais</p>
 			</li>
 		</ul>
@@ -184,8 +193,9 @@
 		</ul>
 		
 		<h3>Résultat</h3>
-		<p>Votre score : <span id="test2-score">0</span></p>
-
+		<p>Votre score : <span id="test2-score">0</span></p>		
+		<p>Un score égal ou supérieur à 48 indiquerait l'absence de détresse dans le couple. </p>
+		<p>Un score égal ou inférieur à 47 serait en faveur d'une détresse relationnelle/maritale. </p>
 	</div>
 </section>
 
