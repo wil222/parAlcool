@@ -8,36 +8,45 @@ function initTF() {
 		var value = container[i].getAttribute('valllue');
 		var truediv = document.createElement('div');
 		truediv.appendChild(document.createTextNode('VRAI'));
+		var semidiv = document.createElement('div');
+		semidiv.appendChild(document.createTextNode('PAR. VRAI'));
 		var falsediv = document.createElement('div');
 		falsediv.appendChild(document.createTextNode('FAUX'));
 		if(value === 'true') {
 			truediv.className ='correct';
+			semidiv.className ='incorrect';
 			falsediv.className = 'incorrect';
 		}
 		else if(value === 'semitrue') {
-			truediv.className ='semicorrect';
-			falsediv.className ='semicorrect';
+			truediv.className ='incorrect';
+			semidiv.className ='correct';
+			falsediv.className ='incorrect';
 		}
 		else {
 			truediv.className ='incorrect';
+			semidiv.className ='incorrect';
 			falsediv.className ='correct';
 		}
-		addTFListener(truediv, falsediv, container[i].getAttribute('aria-controls'));
+		addTFListener(truediv, semidiv, falsediv, container[i].getAttribute('aria-controls'));
 		container[i].appendChild(truediv);
+		container[i].appendChild(semidiv);
 		container[i].appendChild(falsediv);
 	}
 }
 
-function addTFListener(t,f,id) {
+function addTFListener(t,s,f,id) {
 	var h1;
 	var h2;
-	h1 = function() {truefalse(id, true, h1, h2);};
-	h2 = function() {truefalse(id, false, h1, h2);}
+	var h3;
+	h1 = function() {truefalse(id, 'true', h1, h2, h3);};
+	h2 = function() {truefalse(id, 'semi', h1, h2, h3);}
+	h3 = function() {truefalse(id, 'false', h1, h2, h3);}
 	t.addEventListener('click', h1, false);
-	f.addEventListener('click', h2, false);
+	s.addEventListener('click', h2, false);
+	f.addEventListener('click', h3, false);
 }
 
-function truefalse(id, value, h1, h2) {
+function truefalse(id, value, h1, h2, h3) {
 	var elements = document.querySelectorAll('.boolbutton');
 	var div;
 	for (var i=0 ; i<elements.length; i++) {
@@ -45,16 +54,24 @@ function truefalse(id, value, h1, h2) {
 			div = elements[i];
 		}
 	}
-	if(value == true) {
+	if(value === 'true') {
 		div.firstChild.className += ' answered';
+		div.childNodes[1].className += ' unanswered';
+		div.lastChild.className += ' unanswered';
+	}
+	else if(value === 'semi') {
+		div.firstChild.className += ' unanswered';
+		div.childNodes[1].className += ' answered';
 		div.lastChild.className += ' unanswered';
 	}
 	else {
 		div.firstChild.className += ' unanswered';
+		div.childNodes[1].className += ' unanswered';
 		div.lastChild.className += ' answered';
 	}
 	div.firstChild.removeEventListener('click', h1);
-	div.lastChild.removeEventListener('click', h2);
+	div.childNodes[1].removeEventListener('click', h2);
+	div.lastChild.removeEventListener('click', h3);
 }
 
 initTF();
