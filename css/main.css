@@ -10,12 +10,20 @@
 	color:#333;
 }
 
-.accident-table td, .accident-table th{
+.accident-table td, .accident-table th, .therapy-table td, .therapy-table th{
 	padding:10px;
 }
 
 .accident-table td{
 	text-align:center;
+}
+
+.therapy-table td{
+	text-align:left;
+}
+
+.therapy-table .therapy-role {
+	text-align:justify;
 }
 
 .accordion article li ul li p:first-child  {

@@ -2,7 +2,7 @@
 	<div class="parallax"></div>
 	<div class="container wrapper">
 		<div class="page-header">
-			<h1>Commentaires</h1>
+			<h1>Forum</h1>
 		</div>
 	</div>
 	<div class="container wrapper">

@@ -9,7 +9,7 @@ function initTF() {
 		var truediv = document.createElement('div');
 		truediv.appendChild(document.createTextNode('VRAI'));
 		var semidiv = document.createElement('div');
-		semidiv.appendChild(document.createTextNode('PAR. VRAI'));
+		semidiv.appendChild(document.createTextNode('+/- VRAI'));
 		var falsediv = document.createElement('div');
 		falsediv.appendChild(document.createTextNode('FAUX'));
 		if(value === 'true') {
